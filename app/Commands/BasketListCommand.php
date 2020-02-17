@@ -41,7 +41,11 @@ class BasketListCommand extends Command
             {
                 $this->info("  [" . $product->code . "] " . $product->name . " = " . $product->pivot->unit_price . " [". $product->pivot->discount."]");
             }
-            
+            $this->info("Sub Total: " . $basket->subTotal());
+            $this->info("Discount: " . $basket->discount());
+            $this->info("Delivery costs: " . $basket->delivery());
+            $this->info("Total: " . $basket->total());
+            $this->info("---------");
         }
         
     }
